@@ -22,12 +22,19 @@
 
       --bs-primary: var(--color-navy);
       --bs-primary-rgb: 36, 74, 134;
+      --bs-link-color: var(--color-navy);
+      --bs-link-hover-color: #1b3763;
+      --bs-link-color-rgb: 36, 74, 134;
     }
     body {
       background-color: var(--color-cream);
       font-family: "Inter", sans-serif;
     }
     h1, h2, h3, h4, h5, .navbar-brand { font-family: "Poppins", sans-serif; }
+    a { color: var(--color-navy); }
+    /* Bootstrap text-secondary/text-muted default (#6c757d) terlalu terang
+       di atas background pastel kita, jadi digelapkan sedikit agar lolos WCAG AA */
+    .text-secondary, .text-muted { color: #495057 !important; }
     .bg-primary { background-color: var(--color-navy) !important; }
     .text-primary { color: var(--color-navy) !important; }
     .border-primary { border-color: var(--color-navy) !important; }
@@ -54,7 +61,7 @@
         <img src="assets/img/Yellow Star Sticker.jpg" alt="Logo Estrella AI" width="32" height="32" class="rounded">
         Estrella <span class="text-primary">AI</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
@@ -137,7 +144,7 @@
           luas.
         </p>
 
-        <h5 class="fw-bold mt-4">Beberapa Tips Menggunakan Generative AI</h5>
+        <h2 class="fw-bold mt-4 h5">Beberapa Tips Menggunakan Generative AI</h2>
         <ul>
           <li>Gunakan instruksi atau prompt yang jelas dan spesifik.</li>
           <li>Selalu periksa kembali hasil sebelum digunakan secara resmi.</li>
@@ -149,26 +156,6 @@
         </a>
 
         </article>
-
-        <!-- Area komentar sederhana (Bootstrap form component) -->
-        <section class="mt-5 pt-4 border-top" aria-labelledby="komentar-heading">
-          <h5 id="komentar-heading" class="fw-bold mb-3">
-            <i class="bi bi-chat-dots"></i> Tinggalkan Komentar
-          </h5>
-          <form action="#" onsubmit="return false;">
-            <div class="mb-3">
-              <label for="nama-komentar" class="form-label">Nama</label>
-              <input type="text" id="nama-komentar" class="form-control" placeholder="Nama Anda">
-            </div>
-            <div class="mb-3">
-              <label for="isi-komentar" class="form-label">Komentar</label>
-              <textarea id="isi-komentar" class="form-control" rows="3" placeholder="Tulis pendapat Anda tentang artikel ini"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">
-              <i class="bi bi-send"></i> Kirim Komentar
-            </button>
-          </form>
-        </section>
 
       </div>
     </div>
