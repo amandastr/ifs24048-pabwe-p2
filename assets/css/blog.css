@@ -1,0 +1,130 @@
+/* =========================================================
+   ESTRELLA AI — BLOG STYLESHEET (BOOTSTRAP 5 OVERRIDE)
+   File terpisah untuk override warna & komponen Bootstrap 5
+   agar konsisten dengan identitas brand Estrella AI dan
+   menghindari duplikasi blok <style> di blog & blog-detail.
+   ========================================================= */
+
+:root {
+  /* Color Palette resmi Estrella AI */
+  --color-navy: #244a86;
+  --color-navy-dark: #1b3763;
+  --color-yellow: #f6b93b;
+  --color-orange: #d96b32;
+  --color-orange-text: #a84d20; /* versi gelap khusus teks/badge agar kontras memenuhi WCAG AA */
+  --color-coral: #e99a91;
+  --color-cream: #fff8e8;
+  --color-soft-blue: #e6f0fa;
+
+  /* Bootstrap Variable Overrides */
+  --bs-primary: var(--color-navy);
+  --bs-primary-rgb: 36, 74, 134;
+  --bs-link-color: var(--color-navy);
+  --bs-link-hover-color: var(--color-navy-dark);
+  --bs-link-color-rgb: 36, 74, 134;
+}
+
+/* Base styling */
+body {
+  background-color: var(--color-cream);
+  font-family: "Inter", sans-serif;
+  color: #263338;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: var(--color-navy);
+}
+
+/* Accessibility: text-secondary & text-muted digelapkan sedikit agar lolos WCAG AA pada bg-cream */
+.text-secondary,
+.text-muted {
+  color: #495057 !important;
+}
+
+/* Bootstrap Theme Overrides */
+.bg-primary {
+  background-color: var(--color-navy) !important;
+}
+
+.bg-primary.bg-opacity-10 {
+  background-color: var(--color-soft-blue) !important;
+}
+
+.text-primary {
+  color: var(--color-navy) !important;
+}
+
+.border-primary {
+  border-color: var(--color-navy) !important;
+}
+
+.btn-outline-primary {
+  color: var(--color-navy);
+  border-color: var(--color-navy);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-navy);
+  border-color: var(--color-navy);
+  color: #ffffff;
+}
+
+/* Badges & Accents */
+.bg-info {
+  background-color: var(--color-coral) !important;
+  color: #5c2a24 !important;
+}
+
+.bg-success {
+  background-color: var(--color-yellow) !important;
+  color: #5c3d0a !important;
+}
+
+.badge-orange {
+  background-color: var(--color-orange-text);
+}
+
+.badge {
+  border-radius: 999px !important;
+  font-weight: 600;
+}
+
+/* Component Styling */
+.navbar-brand:hover {
+  color: var(--color-navy) !important;
+}
+
+.card {
+  border-radius: 20px !important;
+  overflow: hidden;
+  border: none !important;
+  box-shadow: 0 6px 18px rgba(36, 74, 134, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(36, 74, 134, 0.12) !important;
+}
+
+.btn {
+  border-radius: 999px !important;
+}
+
+img.rounded {
+  border-radius: 20px !important;
+}
+
+.blockquote.border-start {
+  background-color: var(--color-soft-blue);
+  padding: 16px 20px;
+  border-radius: 16px;
+}
+
+.footer-navy {
+  background-color: var(--color-navy);
+}
