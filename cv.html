@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae - Estrella AI</title>
+
+  <!-- Tailwind CSS 4 — Play CDN resmi untuk versi 4 (bukan versi 3 lama) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Google Fonts: Poppins (heading) + Inter (body), sesuai style guide Estrella AI -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind v4 CSS-first config: token warna & font didefinisikan
+       lewat @theme, lalu otomatis jadi utility class (bg-navy, text-navy, dst) -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-navy: #244a86;
+      --color-navy-dark: #1b3763;
+      --color-yellow: #f6b93b;
+      --color-orange: #d96b32;
+      --color-coral: #e99a91;
+      --color-cream: #fff8e8;
+      --color-skyblue: #e6f0fa;
+
+      --font-display: "Poppins", sans-serif;
+      --font-sans: "Inter", sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-cream text-slate-800 font-sans">
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="index.html" class="flex items-center gap-2 font-bold text-slate-800">
+        <img src="assets/img/Yellow Star Sticker.jpg" alt="Logo Estrella AI" class="w-8 h-8 rounded">
+        Estrella <span class="text-navy">AI</span>
+      </a>
+      <div class="flex gap-4 text-sm font-medium">
+        <a href="index.html" class="hover:text-navy transition">Home</a>
+        <a href="blog.html" class="hover:text-navy transition">Blog</a>
+        <a href="cv.html" class="text-navy">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CV Content: dibungkus <article> karena ini satu dokumen utuh -->
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <article>
+    <div class="bg-white rounded-3xl shadow-md p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Kolom kiri: Profile & Contact -->
+      <aside class="md:col-span-1 flex flex-col gap-6">
+        <div class="flex flex-col items-center text-center gap-3">
+          <div class="w-28 h-28 rounded-full bg-skyblue flex items-center justify-center text-4xl font-bold text-navy">
+            NA
+          </div>
+          <div>
+            <h1 class="text-xl font-bold tracking-tight font-display">Amanda Shinta Sitorus</h1>
+            <p class="text-sm text-slate-500">Informatika</p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-navy mb-3">Kontak</h2>
+          <ul class="flex flex-col gap-2 text-sm text-slate-600">
+            <li>NIM: 11S24048</li>
+            <li>Email: amandastr@gmail.com</li>
+            <li>LinkedIn: Amanda Shinta Sitorus</li>
+            <li>GitHub: amandastr</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-navy mb-3">Skills</h2>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-skyblue text-navy px-3 py-1 rounded-full">HTML &amp; CSS</span>
+            <span class="text-xs bg-skyblue text-navy px-3 py-1 rounded-full">Bootstrap</span>
+            <span class="text-xs bg-skyblue text-navy px-3 py-1 rounded-full">Tailwind CSS</span>
+            <span class="text-xs bg-skyblue text-navy px-3 py-1 rounded-full">JavaScript</span>
+            <span class="text-xs bg-skyblue text-navy px-3 py-1 rounded-full">Git &amp; GitHub</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Kolom kanan: About, Education, Experience, Projects -->
+      <section class="md:col-span-2 flex flex-col gap-8">
+
+        <!-- About -->
+        <div>
+          <h2 class="text-sm font-bold uppercase tracking-wider text-navy mb-2">Profile</h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Mahasiswa Program Studi [PROGRAM STUDI ANDA] yang tertarik pada
+            pengembangan web dan penerapan teknologi kecerdasan buatan.
+            Terbiasa bekerja dengan HTML, CSS, dan CSS framework modern seperti
+            Bootstrap dan Tailwind CSS untuk membangun antarmuka yang rapi dan
+            responsive.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h2 class="text-sm font-bold uppercase tracking-wider text-navy mb-3">Education</h2>
+          <div class="flex flex-col gap-1">
+            <p class="font-semibold text-sm">Institut Teknologi Del</p>
+            <p class="text-sm text-slate-500">Informatika — 2024 s.d. sekarang</p>
+          </div>
+        </div>
+
+        <!-- Experience / Organization -->
+        <div>
+          <h2 class="text-sm font-bold uppercase tracking-wider text-navy mb-3">Experience / Organization</h2>
+          <div class="flex flex-col gap-4">
+            <div>
+              <p class="font-semibold text-sm">Anggota Himpunan Mahasiswa Informatika</p>
+              <p class="text-xs text-slate-500 mb-1">2024 — sekarang</p>
+              <p class="text-sm text-slate-600">Berperan aktif dalam kegiatan pengembangan minat dan bakat mahasiswa di bidang teknologi.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div>
+          <h2 class="text-sm font-bold uppercase tracking-wider text-navy mb-3">Projects</h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="border border-slate-200 rounded-2xl p-4 hover:shadow-md transition">
+              <p class="font-semibold text-sm mb-1">Landing Page Jasa AI</p>
+              <p class="text-xs text-slate-500">HTML &amp; CSS murni — praktikum PABWE Pertemuan 2.</p>
+            </div>
+            <div class="border border-slate-200 rounded-2xl p-4 hover:shadow-md transition">
+              <p class="font-semibold text-sm mb-1">Blog AI</p>
+              <p class="text-xs text-slate-500">Bootstrap 5 &amp; Bootstrap Icons — praktikum PABWE Pertemuan 2.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+    </article>
+  </main>
+
+  <footer class="text-center text-xs text-slate-400 py-6">
+    &copy; 2026 Estrella AI. Dibuat untuk keperluan Praktikum PABWE.
+  </footer>
+
+</body>
+</html>
